@@ -1,0 +1,20 @@
+<h1>Notas Academicas</h1>
+<div style="width: 20%;display: flex;justify-content: space-between;">
+	<p style="font-size: 15px">Materia</p>
+	<input #materia type="text">
+</div>
+<br><br>
+<div style="width: 20%;display: flex;justify-content: space-between;">	
+	<p style="font-size: 15px">Nota</p>
+	<input #nota type="number">
+</div>
+<br><br>
+<div style="width:20%;display:flex;justify-content: center;">
+	<button type="button" (click) = "agregarNota(materia.value,nota.value)">Agregar nota</button>
+</div>
+<br><br>
+<div style="width: 20%;display: flex;justify-content: center;">
+	<select size="5" style="width: 50%">
+		<option *ngFor = "let nota of notas">{{nota}}</option>
+	</select>
+</div>

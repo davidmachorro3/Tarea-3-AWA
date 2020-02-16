@@ -1,0 +1,14 @@
+<h1>Test de Primalidad</h1>
+<br>
+<div style="width: 20%;display: flex;justify-content: space-between;">
+	<input #numero type="number">
+	<button type="button" (click)="primo(numero.value)">¿Es primo?</button>	
+</div>
+<div *ngIf = "mostrarTexto">
+	<div *ngIf = "esPrimo; else noEsPrimo">
+		<h1>El numero es primo</h1>
+	</div>
+	<ng-template #noEsPrimo>
+		<h1>El numero no es primo</h1>
+	</ng-template>	
+</div>

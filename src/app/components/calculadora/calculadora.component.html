@@ -1,0 +1,20 @@
+<h1>Calculadora</h1>
+<div style="width: 50%">
+	<p style="font-size: 15px">Operando 1</p>
+	<input #num1 type="number">
+</div>
+<br>
+<div style="width: 50%">
+	<p style="font-size: 15px">Operando 2</p>
+	<input #num2 type="number">
+</div>
+<br>
+<div style="width: 30%;display: flex;justify-content: space-between;">
+	<button type="button" style="width: 20%;" (click) = "suma(num1.value,num2.value)">+</button>
+	<button type="button" style="width: 20%;" (click) = "resta(num1.value,num2.value)">-</button>
+	<button type="button" style="width: 20%;" (click) = "mult(num1.value,num2.value)">*</button>
+	<button type="button" style="width: 20%;" (click) = "div(num1.value,num2.value)">/</button>
+</div>
+<div *ngIf = "mostrarResultado">
+	<h1>Resultado: {{resultado}}</h1>
+</div>
